@@ -10,7 +10,8 @@
 @font-body: "Alice", Arial, sans-serif;
 @font-biggest: 2rem;
 @font-middle: 1.5rem;
-@font-smallest: 1.25rem;
+@font-small: 1.25rem;
+@font-tiny: 0.9rem;
 
 @color-borders: #6a3135;
 @color-margins: #976d6b;
@@ -150,7 +151,6 @@ table {
 html,
 body {
   font-family: @font-body;
-  height: 100%;
   h1,
   h2,
   h3,
@@ -168,9 +168,17 @@ body {
 body {
   max-width: 1200px;
   width: 90%;
-  margin: 3rem auto;
+  margin: 5rem auto;
   padding: 5rem;
-  border: 1px solid @color-borders;
+  border: 20px solid @color-borders;
+  border-radius: 10px;
+
+  .bordered {
+    border: 1px solid @color-borders;
+    padding: 1rem 0;
+    background-color: @color-background;
+    border-radius: 0 10px 10px 0;
+  }
 
   h1 {
     font-size: @font-biggest;
@@ -182,7 +190,11 @@ body {
   }
 
   h3 {
-    font-size: @font-smallest;
+    font-size: @font-small;
+  }
+
+  p {
+    margin: 2rem 0;
   }
 
   header {
@@ -195,16 +207,14 @@ body {
     }
 
     h2 {
-      font-size: @font-smallest;
+      font-size: @font-small;
     }
 
     nav {
       display: flex;
       justify-content: flex-end;
       flex-wrap: wrap;
-      border: 1px solid @color-borders;
-      padding: 1rem 0;
-      background-color: @color-background;
+      .bordered;
 
       ul {
         a {
@@ -221,11 +231,17 @@ body {
     .header-second-line {
       display: flex;
       flex-direction: column;
-      border: 1px solid red;
+      position: relative;
+      bottom: 9rem;
+      padding-left: 10rem;
+      // border: 1px solid red;
     }
   }
 
   main {
+    position: relative;
+    bottom: 9rem;
+
     h3 {
       display: none;
     }
@@ -236,9 +252,36 @@ body {
       h2 {
         display: inline-block;
         width: 50%;
-        border: 1px solid red;
+        .bordered;
+        // border: 1px solid @color-borders;
+        // padding: 1rem 0;
+        // background-color: @color-background;
+        // border-radius: 0 10px 10px 0;
+
+        margin-bottom: 1rem;
+        padding: 0.5rem 0 0.5rem 0.5rem;
+        color: @color-borders;
+
+        @media (max-width: 500px) {
+          border-radius: 0;
+          background-color: #ffffff;
+          border: 0px;
+          padding-left: 0;
+        }
       }
     }
+  }
+
+  footer {
+    width: 100%;
+    // margin-top: 2rem;
+    // .bordered;
+    background-color: @color-borders;
+    color: @color-background;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    font-size: @font-tiny;
   }
 
   // medium Screen;
