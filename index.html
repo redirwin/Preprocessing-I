@@ -1,19 +1,154 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
 
-  <title>My Resume</title>
+    <title>Dave Irwin - Full Stack Developer</title>
 
-  <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index.css" />
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
-</head>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-<body>
-  <h1>My Resume</h1>
-</body>
+  <body>
+    <header>
+      <img
+        class="my-photo"
+        src="img\dave-profile-image.jpg"
+        alt="Dave Irwin photo"
+      />
+      <h1>Dave Irwin</h1>
+      <nav>
+        <ul>
+          <a href="#">Objective</a>
+        </ul>
+        <ul>
+          <a href="#">Project History</a>
+        </ul>
+        <ul>
+          <a href="#">Education</a>
+        </ul>
+        <ul>
+          <a href="#">Personal</a>
+        </ul>
+        <ul>
+          <a href="#">Contact</a>
+        </ul>
+      </nav>
+      <h2 class="tag-line">Full Stack Developer</h2>
+    </header>
+    <main>
+      <section class="objective">
+        <h2>Objective</h2>
+        <h3 class="tag-line">My Career Goals</h3>
+        <p>
+          Esse voluptate aliquip excepteur aute quis tempor sint ut ad. Eiusmod
+          aute culpa velit non. Tempor amet et et dolor aute tempor. Veniam
+          deserunt et velit amet ullamco dolor proident quis nulla. Id tempor
+          pariatur cillum veniam adipisicing nostrud reprehenderit mollit
+          pariatur qui deserunt est nisi. Eiusmod veniam est incididunt nulla
+          enim.
+        </p>
+      </section>
+      <section class="project history">
+        <h2>Project History</h2>
+        <h3 class="tag-line">Work I've Done</h3>
+        <p>
+          Esse voluptate aliquip excepteur aute quis tempor sint ut ad. Eiusmod
+          aute culpa velit non. Tempor amet et et dolor aute tempor. Veniam
+          deserunt et velit amet ullamco dolor proident quis nulla. Id tempor
+          pariatur cillum veniam adipisicing nostrud reprehenderit mollit
+          pariatur qui deserunt est nisi. Eiusmod veniam est incididunt nulla
+          enim.
+        </p>
+      </section>
+      <section class="education">
+        <h2>Education</h2>
+        <h3 class="tag-line">Where I've Studied</h3>
+        <p>
+          Esse voluptate aliquip excepteur aute quis tempor sint ut ad. Eiusmod
+          aute culpa velit non. Tempor amet et et dolor aute tempor. Veniam
+          deserunt et velit amet ullamco dolor proident quis nulla. Id tempor
+          pariatur cillum veniam adipisicing nostrud reprehenderit mollit
+          pariatur qui deserunt est nisi. Eiusmod veniam est incididunt nulla
+          enim.
+        </p>
+      </section>
+      <section class="personal">
+        <h2>Personal</h2>
+        <h3 class="tag-line">What Drives Me</h3>
+        <p>
+          Esse voluptate aliquip excepteur aute quis tempor sint ut ad. Eiusmod
+          aute culpa velit non. Tempor amet et et dolor aute tempor. Veniam
+          deserunt et velit amet ullamco dolor proident quis nulla. Id tempor
+          pariatur cillum veniam adipisicing nostrud reprehenderit mollit
+          pariatur qui deserunt est nisi. Eiusmod veniam est incididunt nulla
+          enim.
+        </p>
+      </section>
+      <section class="contact">
+        <h2>Contact Me</h2>
+        <h3 class="tag-line">Let's Work Together</h3>
+        <form action="https://formspree.io/redirwin@gmail.com" method="POST">
+          <!-- <label for="name">Name</label> -->
+          <input type="text" alt="name field" name="name" placeholder="Name" />
+          <!-- <label for="phone">Phone Number</label> -->
+          <input
+            type="phone"
+            alt="phone field"
+            name="phone"
+            placeholder="Phone Number"
+          />
+          <!-- <label for="email">Email</label> -->
+          <input
+            type="email"
+            alt="email reply field"
+            name="_replyto"
+            placeholder="Email"
+          />
+          <!-- <label for="subject">Subject</label> -->
+          <textarea
+            id="message"
+            alt="message field"
+            name="message"
+            placeholder="Message"
+            style="height:200px"
+          ></textarea>
+          <input type="submit" value="Send" placeholder="Send" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul class="icons">
+        <li>
+          <a href="http://twitter.com/redirwin" class="icon fa-twitter"
+            ><span class="label">Twitter</span></a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/redirwin" class="icon fa-github"
+            ><span class="label">Github</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/redirwin"
+            class="icon fa-linkedin"
+            ><span class="label">LinkedIn</span></a
+          >
+        </li>
+        <li>
+          <a href="#email" class="icon fa-envelope-o"
+            ><span class="label">Email</span></a
+          >
+        </li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Dave Irwin</li>
+      </ul>
+    </footer>
+  </body>
 </html>
