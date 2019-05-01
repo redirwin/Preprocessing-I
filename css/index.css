@@ -161,3 +161,35 @@ html h6,
 body h6 {
   font-family: "Playfair Display", "Times New Roman", Times, serif;
 }
+html a,
+body a {
+  text-decoration: none;
+}
+body {
+  max-width: 1200px;
+  width: 80%;
+  margin: auto;
+  padding: 5rem;
+}
+@media (max-width: 900px) {
+  body {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+header {
+  display: flex;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 2rem;
+}
