@@ -165,11 +165,16 @@ body {
   }
 }
 
+html {
+  background-color: @color-background;
+}
+
 body {
   max-width: 1200px;
   width: 90%;
   margin: 5rem auto;
   padding: 5rem;
+  background-color: white;
   border: 20px solid @color-borders;
   border-radius: 10px;
 
@@ -195,6 +200,7 @@ body {
 
   p {
     margin: 2rem 0;
+    line-height: 1.5rem;
   }
 
   header {
@@ -215,6 +221,7 @@ body {
       justify-content: flex-end;
       flex-wrap: wrap;
       .bordered;
+      border-radius: 0;
 
       ul {
         a {
@@ -274,12 +281,9 @@ body {
 
   footer {
     width: 100%;
-    // margin-top: 2rem;
-    // .bordered;
-    background-color: @color-borders;
-    color: @color-background;
-    padding: 1rem 0;
+    .bordered;
     display: flex;
+    border-radius: 0;
     justify-content: center;
     font-size: @font-tiny;
   }
