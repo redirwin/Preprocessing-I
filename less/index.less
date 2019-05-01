@@ -9,10 +9,13 @@
 @font-headings: "Playfair Display", "Times New Roman", Times, serif;
 @font-body: "Alice", Arial, sans-serif;
 @font-biggest: 2rem;
+@font-middle: 1.5rem;
+@font-smallest: 1.25rem;
 
 @color-borders: #6a3135;
 @color-margins: #976d6b;
 @color-background: #d4d4d5;
+@color-text-body: #6a3135;
 
 html,
 body,
@@ -155,6 +158,7 @@ body {
   h5,
   h6 {
     font-family: @font-headings;
+    padding: 0.25rem 0;
   }
   a {
     text-decoration: none;
@@ -163,34 +167,100 @@ body {
 
 body {
   max-width: 1200px;
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  margin: 3rem auto;
   padding: 5rem;
-
-  // medium Screen;
-  @media (max-width: 900px) {
-    width: 90%;
-    padding: 1rem;
-  }
-
-  // Small Screen;
-  @media (max-width: 500px) {
-    width: 100%;
-    padding: 1rem;
-  }
-}
-
-header {
-  display: flex;
-  nav {
-    display: flex;
-    justify-content: space-between;
-  }
+  border: 1px solid @color-borders;
 
   h1 {
     font-size: @font-biggest;
   }
-}
 
-.container {
+  h2 {
+    font-size: @font-middle;
+    padding: 0.5rem 0;
+  }
+
+  h3 {
+    font-size: @font-smallest;
+  }
+
+  header {
+    img {
+      max-width: 150px;
+      width: 20%;
+      border: 1px solid black;
+      position: relative;
+      bottom: 4rem;
+    }
+
+    h2 {
+      font-size: @font-smallest;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      border: 1px solid @color-borders;
+      padding: 1rem 0;
+      background-color: @color-background;
+
+      ul {
+        a {
+          color: @color-borders;
+          padding: 1rem;
+        }
+
+        a:hover {
+          color: @color-background;
+          background-color: @color-borders;
+        }
+      }
+    }
+    .header-second-line {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid red;
+    }
+  }
+
+  main {
+    h3 {
+      display: none;
+    }
+
+    section {
+      margin-top: 2rem;
+
+      h2 {
+        display: inline-block;
+        width: 50%;
+        border: 1px solid red;
+      }
+    }
+  }
+
+  // medium Screen;
+  @media (max-width: 900px) {
+    padding: 1rem;
+
+    header {
+      img {
+        width: 15%;
+        min-width: 100px;
+        position: static;
+      }
+
+      nav {
+        margin-bottom: 1rem;
+      }
+    }
+
+    // Small Screen;
+    @media (max-width: 500px) {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
 }
