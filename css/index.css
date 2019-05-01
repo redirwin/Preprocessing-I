@@ -167,6 +167,7 @@ body a {
 }
 html {
   background-color: #d4d4d5;
+  scroll-behavior: smooth;
 }
 body {
   max-width: 1200px;
