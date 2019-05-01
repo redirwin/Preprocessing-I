@@ -2,18 +2,17 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("font-awesome.min.css");
 @font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK1dSBYKcSV-LCoeQqfX1RYOo3qPZ7nsDc.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Alice';
   font-style: normal;
   font-weight: 400;
-  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v12/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');
+  src: local('Alice Regular'), local('Alice-Regular'), url(https://fonts.gstatic.com/s/alice/v10/OpNCnoEEmtHa6GcOrgs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYhQ.ttf) format('truetype');
 }
 html,
 body,
@@ -145,5 +144,20 @@ table {
 }
 html,
 body {
+  font-family: "Alice", Arial, sans-serif;
   height: 100%;
+}
+html h1,
+body h1,
+html h2,
+body h2,
+html h3,
+body h3,
+html h4,
+body h4,
+html h5,
+body h5,
+html h6,
+body h6 {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
 }
