@@ -1,5 +1,4 @@
-#6A3135 - Sienna
-#D0A19E - Rose
-#D4D4D5 - Light Steel Blue
-#976D6B - Light Sienna
-#B49C95 - Rosy Brown
+@color-impact: #6a3135;
+@color-background: #d4d4d5;
+@color-text-dark: black;
+@color-text-light: white; 
