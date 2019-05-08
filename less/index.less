@@ -3,57 +3,425 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Alice|Playfair+Display");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+@font-impact: "Playfair Display", "Times New Roman", Times, serif;
+@font-body: "Alice", Arial, sans-serif;
+@font-biggest: 2rem;
+@font-middle: 1.5rem;
+@font-small: 1.25rem;
+@font-tiny: 0.9rem;
+
+@color-impact: #6a3135;
+@color-background: #d4d4d5;
+@color-text-dark: black;
+@color-text-light: white; 
+
+ 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
+// START HERE -----------------------------------------------------
+// ----------------------------------------------------------------
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  font-family: @font-body;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
+// Mixins
+
+.test {
+  border: 1px solid red;
+}
+
+.flex-row {
+  display: flex;
+  // flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.bordered {
+  border: 1px solid @color-impact;
+}
+
+
+html {
+  background-color: @color-background;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1200px;
+  width: 90%;
+  margin: 5% auto;
+  padding: 5%;
+  background-color: white;
+  border: 20px solid @color-impact;
+  border-radius: 10px;
+
+  h1 {
+    font-size: @font-biggest;
+  }
+
+  h2 {
+    font-size: @font-middle;
+  }
+
+  h3 {
+    font-size: @font-small;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: @font-tiny;
+  }
+
+  p {
+    line-height: 1.5rem;
+  }
+
+  .top-container {     
+    .flex-row;
+    }
+
+    img {
+      .bordered;
+      max-height: 150px;
+    }
+    
+    .nav-responsive {
+      display: none;
+    }
+
+    header {
+      .flex-column;
+      width: 100%;
+ 
+      nav {
+        .flex-row;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 5%;
+        background: @color-background;
+        color: @color-impact;
+        .bordered;
+  
+        ul {
+          width: 100%;
+          flex-grow: 1;
+          .flex-row;
+        }
+  
+        a {   
+          flex-grow: 1;
+          padding: 13px 20px;   
+          text-align: center;
+          white-space: nowrap;
+          color: @color-impact;   
+          // .test;
+        } 
+  
+        a:hover {      
+          background: @color-impact;     
+          color: @color-background;
+        }
+
+      }
+
+      .title-tag {         
+        padding: 5px 0 0 5px;
+        @media (max-width: 900px) {
+          padding: 0;
+        }
+      } 
+    }
+
+    main {
+
+      section {
+        margin: 5% 0;
+         
+
+        h3 {
+          margin-bottom: 2%;
+        }
+
+        .box-container {
+          .flex-row;
+          width: 100%;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          margin: auto;
+           
+
+          .box {
+            .flex-column;
+            align-items: center;
+            padding: 3%;
+             
+            width: 25%;
+            @media (max-width: 500px) {
+              width: 50%
+            }
+
+            h3 {
+              .flex-row;
+              align-items: center;
+              text-align: center;
+              margin: 10px 0;
+              height: 3rem;
+            }
+            
+          }
+        }
+
+        span {
+          font-weight: bold;
+          font-size: @font-small;
+        }
+ 
+
+      }
+
+      section:nth-child(2){
+        .flex-column; 
+        align-items: flex-end;
+       }
+
+      section:nth-child(4){
+       .flex-column; 
+       align-items: flex-end;
+      }
+
+      form {
+        .flex-column;
+        width: 50%;
+        @media (max-width: 900px){
+          width: 100%;
+        }
+        margin: 2% 0;
+      }
+
+      input, textarea {
+        margin: 1% 0;
+        padding: 5px;
+      }
+
+      input[type="submit"] {
+        align-self: flex-end;
+        width: 20%;
+      }
+
+  }
+
+  footer {
+    .bordered;
+    padding: 1%;
+    margin-top: 5%;
+    background: @color-background;
+    color: @color-impact;
+    font-size: @font-tiny;
+  }
+
+  // medium Screen;
+  @media (max-width: 900px) {
+    img {
+      display: none;
+      padding: 0;
+      border: 1px solid red;
+    }
+
+    header > nav {
+      display: none;      
+    }    
+
+    .nav-responsive {
+      .flex-row;
+      flex-wrap: wrap;
+      width: 50%;
+      justify-content: space-around;
+      margin-bottom: 5%;
+      background: @color-background;
+      color: @color-impact;
+      .bordered;
+
+      ul {
+        width: 100%;
+        flex-grow: 1;
+        .flex-row;
+        border-bottom: 1px solid @color-impact;
+      }
+      ul:last-of-type {
+        border-bottom: 0px;
+      }
+
+      a {   
+        flex-grow: 1;
+        padding: 13px 20px;   
+        text-align: center;
+        white-space: nowrap;
+        color: @color-impact;   
+        // .test;
+      } 
+
+      a:hover, a:active {      
+        background: @color-impact;     
+        color: @color-background;
+      }
+
+    }
+  
+  }
+
+  // Small Screen;
+  @media (max-width: 500px) {
+     .nav-responsive {
+       width: 100%;   
+       transition: width .5s; 
+    }
+  }
+  
+} 

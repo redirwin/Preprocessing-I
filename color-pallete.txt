@@ -1,0 +1,4 @@
+@color-impact: #6a3135;
+@color-background: #d4d4d5;
+@color-text-dark: black;
+@color-text-light: white; 

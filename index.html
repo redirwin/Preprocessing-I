@@ -1,19 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
 
-  <title>My Resume</title>
+  <title>Dave Irwin - Full Stack Developer</title>
 
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
   <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-  <h1>My Resume</h1>
+
+  <div class="nav-responsive">
+    <ul>
+      <a href="#objective">Objective</a>
+    </ul>
+    <ul>
+      <a href="#skills">Skills</a>
+    </ul>
+    <ul>
+      <a href="#work-history">Work History</a>
+    </ul>
+    <ul>
+      <a href="#education">Education</a>
+    </ul>
+    <ul>
+      <a href="#contact">Contact</a>
+    </ul>
+  </div>
+
+  <!-- <div class="hamburger"><i class="fas fa-bars fa-3x"></i></div> -->
+
+  <div class="top-container">
+
+
+
+    <img class="my-photo" src="img\dave-profile-image.jpg" alt="Dave Irwin photo" />
+
+    <header>
+
+      <nav>
+        <ul>
+          <a href="#objective">Objective</a>
+        </ul>
+        <ul>
+          <a href="#skills">Skills</a>
+        </ul>
+        <ul>
+          <a href="#work-history">Work History</a>
+        </ul>
+        <ul>
+          <a href="#education">Education</a>
+        </ul>
+        <ul>
+          <a href="#contact">Contact</a>
+        </ul>
+      </nav>
+
+      <div class="title-tag">
+        <h1>Dave Irwin</h1>
+        <h2 class="tag-line">Full Stack Developer</h2>
+      </div>
+
+    </header>
+
+  </div>
+
+  <main>
+
+    <section id="objective">
+      <h3>Objective</h3>
+      <p>
+        Seeking a great place to work with awesome people, working on projects that make a real difference in the world.
+        I'm looking for a place where I can give my all to a long-term career in software development.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h3>My Skills</h3>
+      <div class="box-container">
+        <div class="box">
+          <i class="fab fa-html5 fa-3x"></i>
+          <h3>HTML5</h3>
+          <p></p>
+        </div>
+        <div class="box">
+          <i class="fab fa-css3-alt fa-3x"></i>
+          <h3>CSS3</h3>
+          <p></p>
+        </div>
+        <div class="box">
+          <i class="fab fa-js-square fa-3x"></i>
+          <h3>JavaScript</h3>
+          <p></p>
+        </div>
+        <div class="box">
+          <i class="fab fa-github-square fa-3x"></i>
+          <h3>Git &<br>GitHub</h3>
+          <p></p>
+        </div>
+        <div class="box">
+          <i class="fas fa-mobile-alt fa-3x"></i>
+          <h3>Responsive<br>Design</h3>
+          <p></p>
+        </div>
+        <div class="box">
+          <i class="fab fa-react fa-3x"></i>
+          <h3>React</h3>
+          <p></p>
+        </div>
+        <div class="box">
+          <i class="fab fa-node-js fa-3x"></i>
+          <h3>Node.js</h3>
+          <p></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work-history">
+      <h3>Work History</h3>
+
+      <div class="table-container">
+
+        <div class="table-item">
+          <p><span>Transportation Officer</span>, G4S Secure Solutions, 2018-2019</p>
+        </div>
+        <div class="table-item">
+          <p><span>Owner & Web Developer</span>, Red Irwin Media, 2012-2015</p>
+        </div>
+        <div class="table-item">
+          <p><span>Correctional Officer</span>, Arizona Department of Corrections, 2006-2015</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <p><span>Software Engineering</span>, Lambda School, Currently Attending</p>
+      <p><span>Web Development</span>, Brigham Young University - Idaho, Senior</p>
+      <p><span>Associates Degree</span>, Northland Pioneer College</p>
+    </section>
+
+    <h3>Contact Me</h3>
+    <!-- <p>I'd love to see if we can work on a project together. Send me an email here.</p> -->
+    <form id="contact" action="https://formspree.io/redirwin@gmail.com" method="POST">
+      <input type="text" alt="name field" name="name" placeholder="Name" />
+      <input type="phone" alt="phone field" name="phone" placeholder="Phone Number" />
+      <input type="email" alt="email reply field" name="_replyto" placeholder="Email" />
+      <textarea id="message" alt="message field" name="message" placeholder="Type Message Here"
+        style="height:200px"></textarea>
+      <input type="submit" value="Send" placeholder="Send" />
+    </form>
+
+  </main>
+
+  <footer>
+    <p>&copy; Dave Irwin</p>
+
+  </footer>
+
 </body>
+
 </html>
